@@ -16,6 +16,9 @@ namespace cis237assignment4
             //Create a user interface and pass the droidCollection into it as a dependency
             UserInterface userInterface = new UserInterface(droidCollection);
 
+            //Create a static variable class and pass the droidCollection into it as a dependency
+            Static staticInput = new Static(droidCollection);
+
             //Display the main greeting for the program
             userInterface.DisplayGreeting();
 
@@ -24,9 +27,10 @@ namespace cis237assignment4
 
             //Get the choice that the user makes
             int choice = userInterface.GetMenuChoice();
+           
 
             //While the choice is not equal to 3, continue to do work with the program
-            while (choice != 3)
+            while (choice != 6)
             {
                 //Test which choice was made
                 switch (choice)
@@ -36,17 +40,30 @@ namespace cis237assignment4
                         userInterface.CreateDroid();
                         break;
 
-                    //Choose to Print the droid
+                    //Add all hard coded droids in static class
                     case 2:
+                        staticInput.addStatic();
+                        break;
+
+                    //Choose to Print the droid
+                    case 3:
                         userInterface.PrintDroidList();
+                        break;
+
+                    //Categorize by model
+                    case 4:
+
+                        break;
+
+                    // Sort by total cosr
+                    case 5:
+
                         break;
                 }
                 //Re-display the menu, and re-prompt for the choice
                 userInterface.DisplayMainMenu();
                 choice = userInterface.GetMenuChoice();
             }
-
-
         }
     }
 }

@@ -30,14 +30,19 @@ namespace cis237assignment4
         {
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("1. Add a new droid to the system");
-            Console.WriteLine("2. Print the list of droids out");
-            Console.WriteLine("3. Exit the program");
+            Console.WriteLine("2. Load dummy droids into list **FOR TESTING PURPOSES**");
+            Console.WriteLine("3. Print the list of droids out");
+            Console.WriteLine("4. Categorize by model");
+            Console.WriteLine("5. Sort by Total Cost");
+            Console.WriteLine("6. Exit the program");
+
         }
 
         //Method to get a menu choice
         public int GetMenuChoice()
         {
             //Display prompt and get the input from the user
+            Console.WriteLine();
             Console.Write("> ");
             string choice = Console.ReadLine();
 
@@ -64,7 +69,7 @@ namespace cis237assignment4
             int choice = this.GetMenuChoice();
 
             //If the choice is not valid, loop until it is valid, or the user cancels the operation
-            while(choice < 1 || choice > 4)
+            while(choice < 1 || choice > 7)
             {
                 //Prompt for a valid choice
                 this.displayColorSelection();
