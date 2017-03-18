@@ -1,4 +1,7 @@
-﻿using System;
+﻿//David Gipe
+//CIS237
+//3-20-17
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
