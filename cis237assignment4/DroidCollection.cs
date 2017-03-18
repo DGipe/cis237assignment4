@@ -124,5 +124,65 @@ namespace cis237assignment4
             //return the completed string
             return returnString;
         }
+
+       public void SortModel()
+        {
+            //Create stack for each model
+            GenericStack<AstromechDroid> astroStack = new GenericStack<AstromechDroid>();
+            GenericStack<JanitorDroid> janStack = new GenericStack<JanitorDroid>();
+            GenericStack<UtilityDroid> utilStack = new GenericStack<UtilityDroid>();
+            GenericStack<ProtocolDroid> protoStack = new GenericStack<ProtocolDroid>();
+
+            //Generic cue for sorted stacks
+            GenericQueue<IDroid> genQueue = new GenericQueue<IDroid>();
+
+            //Sorts each droid in collection to propepr stack
+            foreach (IDroid droid in this.droidCollection)
+                if (droid != null)
+                {
+                    if (droid is AstromechDroid)
+                    {
+                        astroStack.Push((AstromechDroid)droid);
+                    }
+                    else if (droid is JanitorDroid)
+                    {
+                        janStack.Push((JanitorDroid)droid);
+                    }
+                    else if (droid is UtilityDroid)
+                    {
+                        utilStack.Push((UtilityDroid)droid);
+                    }
+                    else if (droid is ProtocolDroid)
+                    {
+                        protoStack.Push((ProtocolDroid)droid);
+                    }
+                }
+
+            //Move to queue in alhabetical order
+            Move(astroStack, genQueue);
+            Move(janStack, genQueue);
+            Move(utilStack, genQueue);
+            Move(protoStack, genQueue);
+
+            //Counter to track position
+            int position = genQueue.Position;
+
+            //Move contents back into original array
+            for (int i = 0; i < position; i++)
+            {
+                droidCollection[i] = genQueue.Dequeue();
+            }
+        }
+
+        //Started writing this 4 times above and rememberd DRY, decided to make it a method
+        private void Move<T>(GenericStack<T> currentStack, GenericQueue<IDroid> genQueue)
+        {
+            int position = currentStack.Position;
+
+            for (int i = 0; i < position; i++)
+            {
+                genQueue.Enqueue((IDroid)currentStack.Pop());
+            }
+        }
     }
 }

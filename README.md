@@ -4,7 +4,7 @@
 
 ## Author
 
-David Barnes
+David Gipe
 
 ## Description
 
@@ -89,6 +89,16 @@ Be sure to think about what the time complexity for the bucket sort will be. Thi
 ## Outside Resources Used
 
 Algorithms book by Sedgewick and Wayne
+
+Bucket Sort:
+
+-https://msdn.microsoft.com/en-us/library/ms379571(v=vs.80).aspx
+
+-My boss and another colleague
+
+Merge Sort:
+
+
 
 ## Known Problems, Issues, And/Or Errors in the Program
 

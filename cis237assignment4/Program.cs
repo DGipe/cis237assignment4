@@ -55,7 +55,8 @@ namespace cis237assignment4
 
                     //Categorize by model
                     case 4:
-
+                        droidCollection.SortModel();
+                        userInterface.PrintDroidList();
                         break;
 
                     // Sort by total cosr

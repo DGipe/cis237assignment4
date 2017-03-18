@@ -99,6 +99,7 @@ namespace cis237assignment4
         {
             Console.WriteLine();
             Console.WriteLine(this.droidCollection.GetPrintString());
+            Console.WriteLine();
         }
 
         //Display the Model Selection
