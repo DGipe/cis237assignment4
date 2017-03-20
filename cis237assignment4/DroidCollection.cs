@@ -184,5 +184,12 @@ namespace cis237assignment4
                 genQueue.Enqueue((IDroid)currentStack.Pop());
             }
         }
+
+        //Method to sort by total cost
+        public void SortPrice()
+        {
+            MergeSort mergeSort = new MergeSort(this.droidCollection, this.lengthOfCollection);
+            return;
+        }
     }
 }

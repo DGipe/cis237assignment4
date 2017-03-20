@@ -66,5 +66,14 @@ namespace cis237assignment4
                     "Model: " + this.model + Environment.NewLine +
                     "Color: " + this.color + Environment.NewLine;
         }
+
+        //Compares the droids
+        public int CompareTo(object obj)
+        {
+            Droid tempDroid = (Droid)obj;
+
+            return this.totalCost.CompareTo(tempDroid.totalCost);
+        }
+
     }
 }

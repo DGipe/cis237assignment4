@@ -21,7 +21,7 @@ namespace cis237assignment4
         public void addStatic()
         {
             droidCollection.Add("Carbonite", "Utility", "Bronze", false, false, true);
-            droidCollection.Add("Vanadium", "Astromech", "Gold", false, true, true, false, 12);
+            droidCollection.Add("Vanadium", "Astromech", "Gold", false, true, true, false, 120);
             droidCollection.Add("Quadranium", "Utility", "Bronze", true, false, true);
             droidCollection.Add("Carbonite", "Utility", "Silver", true, false, true);
             droidCollection.Add("Carbonite", "Janitor", "Bronze", true, false, false, true, true);

@@ -56,12 +56,17 @@ namespace cis237assignment4
                     //Categorize by model
                     case 4:
                         droidCollection.SortModel();
-                        userInterface.PrintDroidList();
+                        Console.WriteLine();
+                        Console.WriteLine("Complete.  Droids are now organized in alphebtical order by model");
+                        Console.WriteLine();
                         break;
 
                     // Sort by total cosr
                     case 5:
-
+                        droidCollection.SortPrice();
+                        Console.WriteLine();
+                        Console.WriteLine("Complete.  Droids are now sorted low-High");
+                        Console.WriteLine();
                         break;
                 }
                 //Re-display the menu, and re-prompt for the choice

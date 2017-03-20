@@ -98,6 +98,13 @@ Bucket Sort:
 
 Merge Sort:
 
+-https://support.microsoft.com/en-ca/help/320727/how-to-use-the-icomparable-and-icomparer-interfaces-in-visual-c
+
+-https://www.dotnetperls.com/icomparable
+
+-https://msdn.microsoft.com/en-us/library/system.icomparable(v=vs.110).aspx
+
+-http://www.softwareandfinance.com/CSharp/MergeSort_Recursive.html
 
 
 ## Known Problems, Issues, And/Or Errors in the Program

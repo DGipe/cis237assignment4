@@ -20,5 +20,7 @@ namespace cis237assignment4
 
         //Model sort method
         void SortModel();
+        //Price sort method
+        void SortPrice();
     }
 }
